@@ -74,6 +74,11 @@ data_preparada = pd.get_dummies(data_preparada, columns=['TipoAfiliado', 'TipoTi
 
 data_preparada[['EdadAfil', 'ValorSubsidoAfil','NroPersonasFamilia','NroServiciosUsuario']] = min_max_scaler.fit_transform(data[['EdadAfil', 'ValorSubsidoAfil','NroPersonasFamilia','NroServiciosUsuario']])
 
+
+
+
+#Se adicionan las columnas faltantes
+data_preparada=data_preparada.reindex(columns=variables,fill_value=0)
 #Se normaliza la edad para predecir con Knn, Red
 #En los despliegues no se llama fit
 #data_preparada[['Edad']]= min_max_scaler.transform(data_preparada[['Edad']])
@@ -101,5 +106,6 @@ data.head()
 
 
 data
+
 
 
