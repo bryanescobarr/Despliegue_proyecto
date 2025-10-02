@@ -59,8 +59,7 @@ datos = [[TipoAfiliado, TipoTit, GeneroAfil, EdadAfil,
 data = pd.DataFrame(datos, columns=['TipoAfiliado', 'TipoTit', 'GeneroAfil', 'EdadAfil',
        'Municipio', 'CategoriaAfil', 'BenefSubAfil', 'ValorSubsidoAfil',
        'Parentesco', 'NroPersonasFamilia', 'TipoFamilia', 'PercapitaSalario',
-       'ClaseSocialSalario', 'NroServiciosUsuario', 'NroUsos', 'MontoPagado',
-       'cluster']) #Dataframe con los mismos nombres de variables
+       'ClaseSocialSalario', 'NroServiciosUsuario', 'NroUsos', 'MontoPagado']) #Dataframe con los mismos nombres de variables
 
 #Se realiza la preparación
 data_preparada=data.copy()
@@ -108,5 +107,6 @@ print(Y_pred)
 
 data['Prediccion']=Y_pred
 data.head()
+
 
 data
