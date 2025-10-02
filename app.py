@@ -31,21 +31,21 @@ st.title('Clasificación dsociodemográfica de nuevos afiliados')
 TipoAfiliado = st.selectbox('TipoAfiliado', ["'Titular'","'Persona a cargo'", "'Conyuge'"])
 TipoTit  = st.selectbox('TipoTit', ["'Afiliado Dependiente'","'Afiliado Facultativo'", "'Independiente'","'Pensionado'"])
 GeneroAfil = st.selectbox('GeneroAfil', ["'Femenino'","'BMasculino'"])
-EdadAfil = st.slider('EdadAfil', min_value=0, max_value=80, value=80, step=1)
+EdadAfil = st.slider('EdadAfil', min_value=0, max_value=80, value=0, step=1)
 Municipio = st.selectbox('Municipio', ["'MEDELLÍN'"])
 CategoriaAfil = st.selectbox('CategoriaAfil', ["'A'","'B'", "'C'"])
 BenefSubAfil  = st.selectbox('BenefSubAfil', ["'S'","'N'"])
-ValorSubsidoAfil = st.slider('ValorSubsidoAfil', min_value=0, max_value=1000000, value=1000000, step=1)
+ValorSubsidoAfil = st.slider('ValorSubsidoAfil', min_value=0, max_value=1000000, value=0, step=1)
 Parentesco = st.selectbox('Parentesco', ["'Titular'", "'Familiar'"])
-NroPersonasFamilia = st.slider('NroPersonasFamilia', min_value=0, max_value=20, value=20, step=1)
+NroPersonasFamilia = st.slider('NroPersonasFamilia', min_value=0, max_value=20, value=0, step=1)
 TipoFamilia =  st.selectbox('TipoFamilia', ["'Familia nuclear'", "'Familia unipersonal'", "'Familia sin hijos'",
        "'Familia monoparental'", "'Familia extensa'", "'Sin Clasificar'",
        "'Familia homoparental'"])
-PercapitaSalario = st.slider('PercapitaSalario', min_value=0, max_value=1000000000, value=1000000000, step=1)
+PercapitaSalario = st.slider('PercapitaSalario', min_value=0, max_value=1000000000, value=0, step=1)
 ClaseSocialSalario = st.selectbox('ClaseSocialSalario', ["'Sin dato'", "'Clase media'", "'Clase baja'", "'Clase alta'"])
-NroServiciosUsuario = st.slider('NroServiciosUsuario', min_value=0, max_value=200, value=200, step=1)
-NroUsos = st.slider('NroUsos', min_value=0, max_value=200000, value=200000, step=1)
-MontoPagado = st.slider('MontoPagado', min_value=0, max_value=1000000000, value=1000000000, step=1)
+NroServiciosUsuario = st.slider('NroServiciosUsuario', min_value=0, max_value=200, value=0, step=1)
+NroUsos = st.slider('NroUsos', min_value=0, max_value=200000, value=0, step=1)
+MontoPagado = st.slider('MontoPagado', min_value=0, max_value=1000000000, value=0, step=1)
 
 
 
@@ -110,3 +110,4 @@ data.head()
 
 
 data
+
