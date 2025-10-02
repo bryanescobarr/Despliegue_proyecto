@@ -72,15 +72,6 @@ data_preparada = pd.get_dummies(data_preparada, columns=['BenefSubAfil','GeneroA
 data_preparada = pd.get_dummies(data_preparada, columns=['TipoAfiliado', 'TipoTit', 'Municipio','CategoriaAfil', 
 'TipoFamilia', 'ClaseSocialSalario'], drop_first=False, dtype = int) 
 
-data_preparada = data_preparada.drop(['TipoAfiliado_Persona a cargo', 'ClaseSocialSalario_Sin dato', 'TipoTit_Afiliado Facultativo','PercapitaSalario', 'NroUsos', 'MontoPagado',
-       'TipoTit_Afiliado Dependiente', 'TipoTit_Afiliado Facultativo',
-       'TipoTit_Independiente', 'TipoTit_Pensionados', 'Municipio_BARBOSA',
-       'Municipio_GIRARDOTA', 'CategoriaAfil_C',
-       'TipoFamilia_Familia homoparental', 'TipoFamilia_Familia unipersonal',
-       'TipoFamilia_Sin Clasificar', 'ClaseSocialSalario_Clase alta',
-       'ClaseSocialSalario_Clase baja', 'ClaseSocialSalario_Clase media',
-       'ClaseSocialSalario_Sin dato'],axis=1)
-
 data_preparada[['EdadAfil', 'ValorSubsidoAfil','NroPersonasFamilia','NroServiciosUsuario']] = min_max_scaler.fit_transform(data[['EdadAfil', 'ValorSubsidoAfil','NroPersonasFamilia','NroServiciosUsuario']])
 
 #Se normaliza la edad para predecir con Knn, Red
@@ -110,4 +101,5 @@ data.head()
 
 
 data
+
 
